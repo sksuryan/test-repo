@@ -1,6 +1,8 @@
 from flask import Flask, json, jsonify
 from flask_cors import CORS
 
+import os
+
 
 port = int(os.environ.get("PORT", 5000))
 app = Flask(__name__)
