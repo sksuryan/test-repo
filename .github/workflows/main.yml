@@ -25,7 +25,9 @@ jobs:
       run: heroku container:login
     - name: cd Platform
       run: cd ./platform
-    - name: Build and push
+    - name: build
+      run: docker build -d ${{ secrets.FRONT }} .
+    - name: push
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
       run: heroku container:push -a ${{ secrets.FRONT }} web
@@ -37,7 +39,9 @@ jobs:
       run: |
         cd ..
         cd /flask-api
-    - name: Build and push
+    - name: build
+      run: docker build -d ${{ secrets.BACK }} .
+    - name: push
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
       run: heroku container:push -a ${{ secrets.BACK }} web
