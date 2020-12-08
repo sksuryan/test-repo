@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+body {
+  /* background-image: url("https://source.unsplash.com/g83y6do219w/1600x900"); */
+  background-size: cover;
+  backdrop-filter: blur(20px);
+}
+
+#root {
+  backdrop-filter: blur(20px);
+}
