@@ -23,12 +23,14 @@ jobs:
       env: 
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
       run: heroku container:login
-    - name: build
-      run: docker build -t ${{ secrets.FRONT }} ./platform
     - name: push
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: heroku container:push ${{ secrets.FRONT }} -a=${{ secrets.FRONT }} web
+      run: |
+        cd platform
+        heroku container:push -a ${{ secrets.FRONT }} web
+    - name: show
+      run: ls      
     - name: Release
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
