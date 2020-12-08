@@ -28,19 +28,17 @@ jobs:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
       run: |
         cd platform
-        heroku container:push -a ${{ secrets.FRONT }} web
-    - name: show
-      run: ls      
+        heroku container:push -a ${{ secrets.FRONT }} web    
     - name: Release
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
       run: heroku container:release -a ${{ secrets.FRONT }} web 
-    - name: build
-      run: docker build -t ${{ secrets.BACK }} ./flask-api
     - name: push
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: heroku container:push ${{ secrets.BACK }} -a=${{ secrets.BACK }} web
+      run: |
+        cd flask-api
+        heroku container:push -a ${{ secrets.BACK }} web
     - name: Release
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
