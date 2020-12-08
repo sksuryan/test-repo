@@ -1,7 +1,6 @@
 
-FROM python:3.8.6
+FROM python:3.8-alpine
 COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt 
-EXPOSE 8000
-CMD [ "gunicorn","-b","0.0.0.0:$PORT","app:app" ] 
+CMD gunicorn -b 0.0.0.0:$PORT app:app
