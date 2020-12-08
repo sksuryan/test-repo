@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <%- include('./components/header'); -%>
+  <link rel='stylesheet' href='/stylesheets/form.css' />
+  <link rel='stylesheet' href='/stylesheets/feed.css' />
+  <body>
+    <div id='root'>
+      <%- include('./components/nav'); -%>
+      <div class='position-absolute fixed-top d-flex flex-column min-vh-100 justify-content-center align-items-center' style="z-index: 0;">
+        <div id='posts' class="carousel slide w-100" data-touch="true" data-interval="false" data-ride="false" data-wrap="false">
+          <div class="carousel-inner py-5">
+            <!-- item -->
+            <div class="carousel-item active">
+              <div class="d-flex w-100 align-items-center justify-content-center" style="height: 70vh;">
+                <div id='form' class="d-flex flex-column justify-content-center align-items-center shadow p-2 mb5 bg-white rounded">
+                  <% if(posts[0].url.length>1) { %>
+                  <div class="img-container">
+                    <img src='<%- posts[0].url %>' class="img mt-2"/>
+                  </div>
+                  <% } %>
+                  <p class="align-center mt-4 mb-2"><%- posts[0].text %></p>
+                  <div class="d-flex flex-column w-100 ml-4 my-2">
+                    <p class="m-0">shared by <%- posts[0].name %></p>
+                    <p class="m-0">in <%- posts[0].type %></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- item -->
+            <div class="carousel-item ">
+              <div class="d-flex w-100 align-items-center justify-content-center" style="height: 70vh;">
+                <div id='form' class="d-flex flex-column justify-content-center align-items-center shadow p-2 mb5 bg-white rounded">
+                  <% if(posts[1].url.length>1) { %>
+                  <div class="img-container">
+                    <img src='<%- posts[1].url %>' class="img mt-2"/>
+                  </div>
+                  <% } %>
+                  <p class="align-center mt-4 mb-2"><%- posts[1].text %></p>
+                  <div class="d-flex flex-column w-100 ml-4 my-2">
+                    <p class="m-0">shared by <%- posts[1].name %></p>
+                    <p class="m-0">in <%- posts[1].type %></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- item -->
+            <div class="carousel-item ">
+              <div class="d-flex w-100 align-items-center justify-content-center" style="height: 70vh;">
+                <div id='form' class="d-flex flex-column justify-content-center align-items-center shadow p-2 mb5 bg-white rounded">
+                  <% if(posts[2].url.length>1) { %>
+                  <div class="img-container">
+                    <img src='<%- posts[2].url %>' class="img mt-2"/>
+                  </div>
+                  <% } %>
+                  <p class="align-center mt-4 mb-2"><%- posts[2].text %></p>
+                  <div class="d-flex flex-column w-100 ml-4 my-2">
+                    <p class="m-0">shared by <%- posts[2].name %></p>
+                    <p class="m-0">in <%- posts[2].type %></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- item -->
+            <div class="carousel-item ">
+              <div class="d-flex w-100 align-items-center justify-content-center" style="height: 70vh;">
+                <div id='form' class="d-flex flex-column justify-content-center align-items-center shadow p-2 mb5 bg-white rounded">
+                  <% if(posts[3].url.length>1) { %>
+                  <div class="img-container">
+                    <img src='<%- posts[3].url %>' class="img mt-2"/>
+                  </div>
+                  <% } %>
+                  <p class="align-center mt-4 mb-2"><%- posts[3].text %></p>
+                  <div class="d-flex flex-column w-100 ml-4 my-2">
+                    <p class="m-0">shared by <%- posts[3].name %></p>
+                    <p class="m-0">in <%- posts[3].type %></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- item -->
+            <div class="carousel-item ">
+              <div class="d-flex w-100 align-items-center justify-content-center" style="height: 70vh;">
+                <div id='form' class="d-flex flex-column justify-content-center align-items-center shadow p-2 mb5 bg-white rounded">
+                  <% if(posts[4].url.length>1) { %>
+                  <div class="img-container">
+                    <img src='<%- posts[4].url %>' class="img mt-2"/>
+                  </div>
+                  <% } %>
+                  <p class="align-center mt-4 mb-2"><%- posts[4].text %></p>
+                  <div class="d-flex flex-column w-100 ml-4 my-2">
+                    <p class="m-0">shared by <%- posts[4].name %></p>
+                    <p class="m-0">in <%- posts[4].type %></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- item -->
+
+            <div class="carousel-item">
+              <div class="d-flex w-100 align-items-center justify-content-center" style="height: 70vh;">
+                <div id='form' class="d-flex flex-column justify-content-center align-items-center shadow p-2 mb5 bg-white rounded">
+                  <% if(posts[5].url.length>1) { %>
+                  <div class="img-container">
+                    <img src='<%- posts[5].url %>' class="img mt-2"/>
+                  </div>
+                  <% } %>
+                  <p class="align-center mt-4 mb-2"><%- posts[5].text %></p>
+                  <div class="d-flex flex-column w-100 ml-4 my-2">
+                    <p class="m-0">shared by <%- posts[5].name %></p>
+                    <p class="m-0">in <%- posts[5].type %></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- item -->
+
+            <div class="carousel-item ">
+              <div class="d-flex w-100 align-items-center justify-content-center" style="height: 70vh;">
+                <div id='form' class="d-flex flex-column justify-content-center align-items-center shadow p-2 mb5 bg-white rounded">
+                  <% if(posts[6].url.length>1) { %>
+                  <div class="img-container">
+                    <img src='<%- posts[6].url %>' class="img mt-2"/>
+                  </div>
+                  <% } %>
+                  <p class="align-center mt-4 mb-2"><%- posts[6].text %></p>
+                  <div class="d-flex flex-column w-100 ml-4 my-2">
+                    <p class="m-0">shared by <%- posts[6].name %></p>
+                    <p class="m-0">in <%- posts[6].type %></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- item -->
+            <div class="carousel-item ">
+              <div class="d-flex w-100 align-items-center justify-content-center" style="height: 70vh;">
+                <div id='form' class="d-flex flex-column justify-content-center align-items-center shadow p-2 mb5 bg-white rounded">
+                  <% if(posts[7].url.length>1) { %>
+                  <div class="img-container">
+                    <img src='<%- posts[7].url %>' class="img mt-2"/>
+                  </div>
+                  <% } %>
+                  <p class="align-center mt-4 mb-2"><%- posts[7].text %></p>
+                  <div class="d-flex flex-column w-100 ml-4 my-2">
+                    <p class="m-0">shared by <%- posts[7].name %></p>
+                    <p class="m-0">in <%- posts[7].type %></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- item -->
+            <div class="carousel-item ">
+              <div class="d-flex w-100 align-items-center justify-content-center" style="height: 70vh;">
+                <div id='form' class="d-flex flex-column justify-content-center align-items-center shadow p-2 mb5 bg-white rounded">
+                  <% if(posts[8].url.length>1) { %>
+                  <div class="img-container">
+                    <img src='<%- posts[8].url %>' class="img mt-2"/>
+                  </div>
+                  <% } %>
+                  <p class="align-center mt-4 mb-2"><%- posts[8].text %></p>
+                  <div class="d-flex flex-column w-100 ml-4 my-2">
+                    <p class="m-0">shared by <%- posts[8].name %></p>
+                    <p class="m-0">in <%- posts[8].type %></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- item -->
+            <div class="carousel-item ">
+              <div class="d-flex w-100 align-items-center justify-content-center" style="height: 70vh;">
+                <div id='form' class="d-flex flex-column justify-content-center align-items-center shadow p-2 mb5 bg-white rounded">
+                  <% if(posts[9].url.length>1) { %>
+                  <div class="img-container">
+                    <img src='<%- posts[9].url %>' class="img mt-2"/>
+                  </div>
+                  <% } %>
+                  <p class="align-center mt-4 mb-2"><%- posts[9].text %></p>
+                  <div class="d-flex flex-column w-100 ml-4 my-2">
+                    <p class="m-0">shared by <%- posts[9].name %></p>
+                    <p class="m-0">in <%- posts[9].type %></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+            <div class="carousel-item ">
+              <div class="d-flex w-100 align-items-center justify-content-center" style="height: 70vh;">
+                <div id='form' class="d-flex flex-column justify-content-center align-items-center shadow p-4 bg-white rounded">
+                 
+                  <p class="align-justify">We hope these posts made you happy🥰 In an effort to make the site less addictive, we have limited the number of posts to 10😇 Come back tomorrow for more such happy posts or contribite now to make someone else's day better🤗 Have a great day ahead!👋</p>
+                  
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- inner carousel ends here-->
+        </div>
+        <!-- controls -->
+        <a id="feed-prev" href="#posts" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" style="color: black;"></span>
+        </a>
+        <div class="d-flex mb-4 btns">
+          <button class="btn btn-outline-success mr-3" href="#posts" role="link" data-slide="next">mark as seen👀</button>
+          <a href="/users/upload" role="button"><button class="btn btn-outline-danger">Contribute❤</button></a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <%- include('./components/scripts'); -%>
+</html>
+
+
